@@ -1,0 +1,30 @@
+{
+  "name": "markoJS",
+  "version": "1.0.0",
+  "description": "Marko test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-marko": "npx marko compile src/components/**/*.marko",
+    "start": "npm run compile-marko && node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hypr2771/marko.git"
+  },
+  "author": "Vincent Castelluci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hypr2771/marko/issues"
+  },
+  "homepage": "https://github.com/hypr2771/marko#readme",
+  "dependencies": {
+    "lasso": "^3.2.8",
+    "lasso-marko": "^2.4.6",
+    "marko": "^4.14.1",
+    "marko-cli": "^4.1.4"
+  },
+  "browser": {
+    "src/components/hello.js": "src/components/hello.browser.js"
+  }
+}
